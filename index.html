@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boss Battle</title>
+
+    <link rel="stylesheet" href="/alien.css" />
+</head>
+<body>
+    <img src="/maze.jpg" id="maze" alt="maze" class="center" />
+    <img src="/alien.png" id="a1" alt="alien" class="alien" />
+    <img src="/alien.png" id="a2" alt="alien" class="alien" />
+    <img src="/alien.png" id="a3" alt="alien" class="alien" />
+    <img src="/alien.png" id="a4" alt="alien" class="alien" />
+    <img src="/alien.png" id="a5" alt="alien" class="alien" />
+    <img src="/alien.png" id="a6" alt="alien" class="alien" />
+    <img src="/alien.png" id="a7" alt="alien" class="alien" />
+    
+    <div id="score">Round <span id="roundCount">0</span> Score: <span id="scoreCount">0</span></div>
+
+    <div id="blur" class="inv">
+        <div id="questionsDiv" class="center">
+            <div id="title">hi</div>
+            <div id="questions">
+                <div id="a" data-number="1" class="option">1</div>
+                <div id="b" data-number="2" class="option">2</div>
+                <div id="c" data-number="3" class="option">3</div>
+                <div id="d" data-number="4" class="option">4</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/alien.js" ></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planets</title>
+
+    <style>
+        .inv {
+            visibility: hidden;
+        }
+
+        #w {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    Write the 8 Planets in Order
+    <form id="form">
+        <input type="text" name="1" id="1">
+        <input type="text" name="2" id="2">
+        <input type="text" name="3" id="3">
+        <input type="text" name="4" id="4">
+        <input type="text" name="5" id="5">
+        <input type="text" name="6" id="6">
+        <input type="text" name="7" id="7">
+        <input type="text" name="8" id="8">
+
+        <label class="inv" id="w">WRONG!</label>
+
+        <button>Submit</button>
+    </form>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $('#form').on("submit", function (e) {
+            e.preventDefault();
+            let a1 = $("#1").val().toLowerCase() == "mercury";
+            let a2 = $("#2").val().toLowerCase() == "venus"
+            let a3 = $("#3").val().toLowerCase() == "earth"
+            let a4 = $("#4").val().toLowerCase() == "mars"
+            let a5 = $("#5").val().toLowerCase() == "jupiter"
+            let a6 = $("#6").val().toLowerCase() == "saturn"
+            let a7 = $("#7").val().toLowerCase() == "uranus"
+            let a8 = $("#8").val().toLowerCase() == "neptune"
+
+            if (a1 && a2 && a3 && a4 && a5 && a6 && a7 && a8) {
+                $(location).attr("href", "/win")
+            } else {
+                $("#w").removeClass("inv");
+            }
+        })
+    </script>
+</body>
+</html>
